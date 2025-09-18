@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminDashboardController">
+    <VBox spacing="20.0" alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" style="-fx-padding: 20;">
+        <Label text="Admin Dashboard" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+        
+        <VBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 20; -fx-background-color: #f0f0f0; -fx-background-radius: 5;">
+            <Label text="Add New Product" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+            
+            <TextField fx:id="productNameField" promptText="Product Name"/>
+            <TextField fx:id="productIdField" promptText="Product ID"/>
+            <TextField fx:id="productPriceField" promptText="Price"/>
+            <TextField fx:id="productCategoryField" promptText="Category"/>
+            
+            <Button text="Add Product" onAction="#handleAddProduct" style="-fx-font-weight: bold;"/>
+            <Label fx:id="adminMessageLabel" style="-fx-text-fill: green;"/>
+        </VBox>
+        
+        <Button text="Back to Shop" onAction="#handleBackToShop"/>
+    </VBox>
+</AnchorPane>

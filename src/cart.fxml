@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CartController">
+    <VBox spacing="20.0" alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" style="-fx-padding: 20;">
+        <Label text="Your Shopping Cart" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+        
+        <ListView fx:id="cartListView" prefWidth="400" prefHeight="300">
+            <placeholder>
+                <Label text="Your cart is empty."/>
+            </placeholder>
+        </ListView>
+        
+        <Label fx:id="totalLabel" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+        
+        <HBox spacing="20" alignment="CENTER">
+            <Button text="Continue Shopping" onAction="#handleContinueShopping"/>
+            <Button text="Checkout" onAction="#handleCheckout" style="-fx-font-weight: bold;"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
